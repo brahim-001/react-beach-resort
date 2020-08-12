@@ -1,7 +1,9 @@
 import React from 'react';
 import Room from '../components/Room';
 
+
 export default function RoomList({rooms}) {
+
 if(rooms.length ===0) {
     return(
         <div className="empty-search">
@@ -11,6 +13,7 @@ if(rooms.length ===0) {
 }
 
     return (
+
         <section className="roomslist">
             <div className="roomslist-center">
                 {
@@ -20,5 +23,6 @@ if(rooms.length ===0) {
                 }
             </div>
         </section>
+        
     )
 }

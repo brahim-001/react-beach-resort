@@ -1,7 +1,7 @@
 
- import React from 'react';
- import RoomsList from './RoomList';
- import RoomsFilter from './RoomsFilter';
+import React from 'react';
+import RoomsList from './RoomList';
+import RoomsFilter from './RoomsFilter';
 import {withRoomConsumer} from '../context';
 import Loading from './Loading';
 

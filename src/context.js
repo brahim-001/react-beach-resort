@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import items from './data';
-import Client from './Contentful';
+// import Client from './Contentful';
 
 
 
 const RoomContext = React.createContext();
 
-// <RoomContext.Provider value={'hello'}
 export default class RoomProvider extends Component {
     state={
         rooms:[], 
@@ -27,9 +26,13 @@ export default class RoomProvider extends Component {
  // getData 
  getData = async () =>{
      try{
-          let response = await Client.getEntries({
-            content_type:"beachResortRoomExample"
-        });
+
+
+        //   let response = await Client.getEntries({
+        //     content_type:"beachResortRoomExample"
+        // });
+
+
          let rooms = this.formatData(items);
          let featuredRooms = rooms.filter(room =>room.featured === true);
 
@@ -160,7 +163,7 @@ if(pets){
 
     render() {
         return (
-            <RoomContext.Provider value={{...this.state,     getRoom: this.getRoom, 
+            <RoomContext.Provider value={{...this.state, getRoom: this.getRoom, 
             handleChange:this.handleChange,
             filterRooms:this.filterRooms}}>
                 

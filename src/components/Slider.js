@@ -11,23 +11,17 @@ export default class Slider extends Component {
           data-ride="carousel"
         >
           <ol className="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to="0"
-              className="active"
-            ></li>
-
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <div className="slider">
+                 <h1>WELCOME</h1>
+                 <p>Discover our Hotel</p>
+                 <div></div>
+            </div>
+          
           </ol>
 
           <div className="carousel-inner" role="listbox">
-            <div className="carousel-item active">
-              <div className="slider">
-              <h1>WELCOME</h1>
-              <p>Discover our Hotel</p>
-              <div></div>
-            </div></div>
+            
+            <div className="carousel-item active"></div>
             <div id="target" className="carousel-item"></div>
             <div id="target" className="carousel-item"></div>
             <div id="target" className="carousel-item"></div>
