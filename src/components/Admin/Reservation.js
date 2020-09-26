@@ -13,7 +13,12 @@ export default class Reservation extends Component {
         // console.log(this.props.reservation.id)
         await Axios.delete("http://127.0.0.1:8000/api/reservations"+"/"+this.props.reservation.id);
         // this.getReservations();
+        this.props.getReservations();
+
       };
+
+
+
 
 
     render() {  

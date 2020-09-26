@@ -1,6 +1,47 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
+const api = 'http://127.0.0.1:8000';
+
 
 export default class Footer extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            email: '',
+            message: ''
+            
+        }
+
+        this.onChange = this.onChange.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+
+    }
+
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+        axios.post(`${api}/api/messages`, {
+            email: this.state.email,
+            message: this.state.message
+        });
+        this.clearFormFields()
+        
+    }
+
+    clearFormFields = () => {
+
+      this.setState({ 
+          email: '',
+          message: ''
+        });
+    
+      }
+
+
     render() {
         return (
             <div className="footer"> 
@@ -39,21 +80,26 @@ export default class Footer extends Component {
                 <div className="footer-section contact-form">
                     <h2>Contact us</h2>
                     <br/>
-                    <form>
+
+                    <form noValidate onSubmit={this.onSubmit}>
                       <div className="form-group">
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+                        <input type="email" name="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                         value={this.state.email} onChange={this.onChange}/>
                       </div>
                     
                      
                       <div className="form-group">
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."></textarea>
+                        <textarea className="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."
+                         value={this.state.message} onChange={this.onChange}></textarea>
                       </div>
                       <div className="form-group">
-                          <input className="btn btn-primary" type="submit" value="Submit"/
+                          <input className="btn btn-primary" type="submit" name="submit" value="Submit"/
                           >
       
                         </div>
                     </form>
+
+
                 </div>
             </div>
       

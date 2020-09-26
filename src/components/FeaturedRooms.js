@@ -18,7 +18,7 @@ export default class FeaturedRooms extends Component {
         });
 
         return (
-            <section className="featured-rooms" style={{backgroundColor:"#F0FFFF"}}>
+            <section className="featured-rooms" style={{backgroundColor:"#d4f0f5"}}>
                 <Title title="featured rooms"/>    
                 <div className="featured-rooms-center">
                      {loading?<Loading/> : rooms}

@@ -340,8 +340,8 @@
     position: absolute;
     bottom: -3px;
     right: -3px;
-    border-bottom: 3px solid #ec3f34;
-    border-right: 3px solid #ec3f34;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -ms-transition: all 0.5s ease 0s;
@@ -357,8 +357,8 @@
     position: absolute;
     top: -3px;
     left: -3px;
-    border-top: 3px solid #ec3f34;
-    border-left: 3px solid #ec3f34;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -ms-transition: all 0.5s ease 0s;
@@ -843,15 +843,15 @@
   /* booking */
 
   .booking{
-    margin-top: 70px;
+    /* margin-top: 70px; */
     /* margin-bottom: 100px; */
     padding: 0;
   }
 
   .booking1{
-    margin-top: 70px;
+    /* margin-top: 70px; */
     /* margin-bottom: 100px; */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoYTF-J6kdC8c1dFOimYUhkwJilT8Km8_53Q&usqp=CAU");
+    background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/10/19/10198006_v3.jpeg");
     background-position: center;
     background-size: cover;
     height: 42em;
@@ -997,27 +997,76 @@
   /* admin  */
 
 .reservationsList{
-   background-image: url("https://i.pinimg.com/originals/3a/3b/7b/3a3b7b936e3ff87016de28ea865cbbb6.jpg");
+   /* background-image: url("https://i.pinimg.com/originals/3a/3b/7b/3a3b7b936e3ff87016de28ea865cbbb6.jpg");
    background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: cover; */
    height: 100%;
    padding-bottom: 50px;
+   background-color: white;
 }
 
 .reservationsList2{
-      padding-top: 100px;
+      margin-right: 25px;
+      margin-left: 25px;
+
 }
 
+.reservationsList2 tbody{
+  color: black;
+
+}
+ 
 .reservationsList2 h1{
    text-align: center;
    font-family: sans-serif;
-   color: white;
+   color: black;
    padding: 30px;
 }
-.reservationsList2 tr td {
-  text-align: center;
-}
+/* 
+.reservationsList2 td tr th{
+  text-align: center !important;
+  justify-content: center;
+  align-content: center;
+} */
 
 
     /*end  admin  */
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #d4f0f5;
+      height: 100vh;
+    }
+    #login .container #login-row #login-column #login-box {
+      margin-top: 80px;
+      /* padding-bottom: 50px; */
+
+      margin-bottom: 100px;
+      max-width: 600px;
+      height: 480px;
+      border: 1px solid #9C9C9C;
+      background-color: #fcfcfc;
+    }
+    #login .container #login-row #login-column #login-box #login-form {
+      padding: 50px;
+      padding-bottom: 30px;
+    }
+    #login .container #login-row #login-column #login-box #login-form #register-link {
+      margin-top: -85px;
+    }
+
+
+    #login .container #login-row #login-column #login-box2 {
+      margin-top: 50px;
+      padding: 30px;
+      /* padding-bottom: 50px; */
+
+      margin-bottom: 60px;
+      max-width: 600px;
+      height: 570px;
+      border: 1px solid #9C9C9C;
+      background-color: #fcfcfc;
+    }

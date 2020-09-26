@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Hero from "./Hero";
-
+import Banner from '../components/Banner';
+import {Link} from 'react-router-dom';
 export default class Slider extends Component {
   render() {
     return (
@@ -11,23 +11,30 @@ export default class Slider extends Component {
           data-ride="carousel"
         >
           <ol className="carousel-indicators">
-          <div className="slider">
+          {/* <div className="slider">
                  <h1>WELCOME</h1>
                  <p>Discover our Hotel</p>
                  <div></div>
-            </div>
+          </div> */}
+        <div style={{marginBottom:"130px"}}>
+        <Banner  title="luxurious rooms" subtitle="deluxe rooms starting at $299">
+              <Link to='/rooms' className=" btn-primary">
+                  our rooms
+              </Link>
+          </Banner>
+        </div>
           
           </ol>
 
           <div className="carousel-inner" role="listbox">
             
-            <div className="carousel-item active"></div>
+            <div id="target" className="carousel-item active"></div>
             <div id="target" className="carousel-item"></div>
             <div id="target" className="carousel-item"></div>
             <div id="target" className="carousel-item"></div>
             <div id="target" className="carousel-item"></div>
             {/* <div id="target" class="carousel-item"></div> */}
-            <div id="target" className="carousel-item"></div>
+            {/* <div id="target" className="carousel-item"></div> */}
           </div>
 
           <a
